@@ -1,0 +1,56 @@
+{
+  "nowPlaying": {
+    "name": "Now Playing",
+    "url": "movie/now_playing",
+    "query": { 
+      "region": "ID",
+      "page": 1
+    },
+    "detail": {
+      "name": "Movie Detail",
+      "url": "movie/",
+      "query": null,
+      "review": {
+        "name": "Movie Review",
+        "url": "/reviews",
+        "query": null
+      }
+    }
+  },
+  "upcoming": {
+    "name": "Upcoming",
+    "url": "movie/upcoming",
+    "query": { 
+      "region": "ID",
+      "page": 1
+    },
+    "detail": {
+      "name": "Movie Detail",
+      "url": "movie/",
+      "query": null,
+      "review": {
+        "name": "Movie Review",
+        "url": "/reviews",
+        "query": null
+      }
+    }
+  },
+  "popular": {
+    "name": "Popular",
+    "url": "movie/popular",
+    "query": { 
+      "region": "ID",
+      "page": 1
+    },
+    "detail": {
+      "name": "Movie Detail",
+      "url": "movie/",
+      "query": null,
+      "review": {
+        "name": "Movie Review",
+        "url": "/reviews",
+        "query": null
+      }
+    }
+  }
+}

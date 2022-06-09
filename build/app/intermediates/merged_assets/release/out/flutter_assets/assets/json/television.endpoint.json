@@ -1,0 +1,38 @@
+{
+  "onTheAir": {
+    "name": "On The Air",
+    "url": "tv/on_the_air",
+    "query": { 
+      "language": "ID",
+      "page": 1
+    },
+    "detail": {
+      "name": "Television Detail",
+      "url": "tv/",
+      "query": null,
+      "review": {
+        "name": "Television Review",
+        "url": "/reviews",
+        "query": null
+      }
+    }
+  },
+  "popular": {
+    "name": "Popular",
+    "url": "tv/popular",
+    "query": { 
+      "language": "ID",
+      "page": 1
+    },
+    "detail": {
+      "name": "Television Detail",
+      "url": "tv/",
+      "query": null,
+      "review": {
+        "name": "Movie Review",
+        "url": "/reviews",
+        "query": null
+      }
+    }
+  }
+}
