@@ -7997,8 +7997,8 @@ kotlin.comparisons.ComparisonsKt___ComparisonsKt:
     public static final java.lang.Object minOf(java.lang.Object,java.lang.Object,java.util.Comparator)
     public static final java.lang.Object minOf(java.lang.Object,java.lang.Object[],java.util.Comparator)
     public void <init>()
-com.google.j2objc.annotations.WeakOuter
 org.intellij.lang.annotations.JdkConstants$TitledBorderTitlePosition
+com.google.j2objc.annotations.WeakOuter
 com.google.common.collect.StandardTable$ColumnKeySet
 androidx.customview.widget.FocusStrategy$CollectionAdapter
 com.google.common.collect.MapMakerInternalMap$1

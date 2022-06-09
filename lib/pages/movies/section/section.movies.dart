@@ -150,10 +150,7 @@ class _SectionMoviesState extends State<SectionMovies> {
                   controller: controller,
                   children: [
                     Padding(
-                      padding: const EdgeInsets.symmetric(
-                        vertical: 6,
-                        horizontal: 12,
-                      ),
+                      padding: const EdgeInsets.all(12),
                       child: _detailTitle(detail.title!)
                     ),
                     Padding(
@@ -166,7 +163,12 @@ class _SectionMoviesState extends State<SectionMovies> {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             _detailType(detail),
-                            _detailRated(detail.adult!),
+                            Row(
+                              children: [
+                                _detailRating(detail.voteAverage!),
+                                _detailRated(detail.adult!),
+                              ],
+                            )
                           ],
                         ),
                       ),
@@ -192,6 +194,22 @@ class _SectionMoviesState extends State<SectionMovies> {
           color: Palettes.nyctophile,
           fontSize: 20,
           fontWeight: FontWeight.w900,
+        ),
+      );
+
+  Container _detailRating(num rating) => Container(
+        padding: const EdgeInsets.all(4),
+        margin: const EdgeInsets.symmetric(horizontal: 4),
+        decoration: BoxDecoration(
+          color: Palettes.solar,
+          borderRadius: BorderRadius.circular(4),
+        ),
+        child: Text('$rating / 10',
+          style: TextStyle(
+            fontSize: 12,
+            fontWeight: FontWeight.w900,
+            color: Palettes.nyctophile,
+          ),
         ),
       );
 

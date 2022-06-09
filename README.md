@@ -1,6 +1,10 @@
-# application
+<p align="center">
+  <img height="160" src="/assets/images/logo-tmdb.png">
+</p>
 
-YouTap Flutter Assessment Project.
+<h4 align="center">
+  YouTap Flutter Assessment Project.
+</h4>
 
 ## Getting Started
 
@@ -44,3 +48,39 @@ used for reusable and global function
 ### pages
 
 user for parent and its children page
+
+## How To
+
+### Run
+
+Use `Flutter run` to run Project locally
+
+### Build
+
+Building apps have different way since it could be run on Android and iOS. But both type have its own behavior
+
+#### Android
+
+`flutter build apk` to build normally, but if you want it in smaller size you can split using `flutter build apk --split-per-abi`
+
+#### iOS
+
+`flutter build ipa`. But **XCode** is required. You must use a device running **macOS** to build.
+
+## Screenshot
+
+### Splash Screen
+
+<img width="200" src="/assets/images/screenshot-splash.png" />
+
+### Movie Page
+
+<img width="200" src="/assets/images/screenshot-list.png" />
+<img width="200" src="/assets/images/screenshot-detail.png" />
+<img width="200" src="/assets/images/screenshot-detail-with-review.png" />
+
+### Television Page
+
+<img width="200" src="/assets/images/screenshot-list-2.png" />
+<img width="200" src="/assets/images/screenshot-detail-2.png" />
+<img width="200" src="/assets/images/screenshot-detail-with-review-2.png" />

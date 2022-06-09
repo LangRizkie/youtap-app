@@ -10,6 +10,7 @@ class Palettes {
   static Color cold = const Color(0xFFF3FDFB);
   static Color aqua = const Color(0xFFD8E8E4);
   static Color naturally = const Color(0xFFCFD1DA);
+  static Color solar = const Color(0xFFFFC16C);
 }
 
 class ThemeApp {
