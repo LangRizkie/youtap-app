@@ -1,4 +1,0 @@
-#Fri Jun 10 10:47:17 ICT 2022
-base.0=D\:\\mobile\\youtap\\application\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
-renamed.0=classes.dex
-path.0=classes.dex
