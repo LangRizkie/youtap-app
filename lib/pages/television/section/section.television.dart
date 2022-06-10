@@ -37,7 +37,7 @@ class _SectionTelevisionState extends State<SectionTelevision> {
     return FutureProvider(
       initialData: null,
       create: (context) => _getTelevision(menu!),
-      child: Consumer<Television>(
+      child: Consumer<Television?>(
         builder: (context, Television? television, widget) => Container(
           child: television != null
               ? _movieSection(menu!.name ?? '', television)
@@ -210,23 +210,23 @@ class _SectionTelevisionState extends State<SectionTelevision> {
       );
 
   Column _detailOverview(String overview) => Column(
-    children: [
-      Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 12),
-        child: Text(
-          overview,
-            style: TextStyle(
-              color: Palettes.nyctophile,
-              fontWeight: FontWeight.w600,
+        children: [
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 12),
+            child: Text(
+              overview,
+              style: TextStyle(
+                color: Palettes.nyctophile,
+                fontWeight: FontWeight.w600,
+              ),
             ),
           ),
-      ),
-      const Divider(
-        height: 24,
-        thickness: 1,
-      ),
-    ],
-  );
+          const Divider(
+            height: 24,
+            thickness: 1,
+          ),
+        ],
+      );
 
   Padding _detailReview(Review review) {
     return Padding(

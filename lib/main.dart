@@ -1,4 +1,8 @@
+import 'package:application/models/movie_detail.model.dart';
 import 'package:application/models/movies.model.dart';
+import 'package:application/models/review.model.dart';
+import 'package:application/models/television.model.dart';
+import 'package:application/models/television_detail.model.dart';
 import 'package:application/modules/global.module.dart';
 import 'package:application/modules/routing.module.dart';
 import 'package:application/modules/theme.module.dart';
@@ -16,7 +20,11 @@ void main() async {
       module: AppModule(),
       child: MultiProvider(
         providers: [
-          ChangeNotifierProvider(create: (_) => Movies())
+          ChangeNotifierProvider(create: (_) => Movies()),
+          ChangeNotifierProvider(create: (_) => MovieDetail()),
+          ChangeNotifierProvider(create: (_) => Television()),
+          ChangeNotifierProvider(create: (_) => TelevisionDetail()),
+          ChangeNotifierProvider(create: (_) => Review()),
         ],
         child: const Application(),
       ),

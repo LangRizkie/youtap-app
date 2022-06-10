@@ -37,7 +37,7 @@ class _SectionMoviesState extends State<SectionMovies> {
     return FutureProvider(
       initialData: null,
       create: (context) => _getMovies(menu!),
-      child: Consumer<Movies>(
+      child: Consumer<Movies?>(
         builder: (context, Movies? movies, widget) => Container(
           child: movies != null
               ? _movieSection(menu!.name ?? '', movies)
@@ -150,9 +150,8 @@ class _SectionMoviesState extends State<SectionMovies> {
                   controller: controller,
                   children: [
                     Padding(
-                      padding: const EdgeInsets.all(12),
-                      child: _detailTitle(detail.title!)
-                    ),
+                        padding: const EdgeInsets.all(12),
+                        child: _detailTitle(detail.title!)),
                     Padding(
                       padding: const EdgeInsets.symmetric(
                         horizontal: 12,
@@ -204,7 +203,8 @@ class _SectionMoviesState extends State<SectionMovies> {
           color: Palettes.solar,
           borderRadius: BorderRadius.circular(4),
         ),
-        child: Text('$rating / 10',
+        child: Text(
+          '$rating / 10',
           style: TextStyle(
             fontSize: 12,
             fontWeight: FontWeight.w900,
@@ -257,23 +257,23 @@ class _SectionMoviesState extends State<SectionMovies> {
       );
 
   Column _detailOverview(String overview) => Column(
-    children: [
-      Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 12),
-        child: Text(
-          overview,
-            style: TextStyle(
-              color: Palettes.nyctophile,
-              fontWeight: FontWeight.w600,
+        children: [
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 12),
+            child: Text(
+              overview,
+              style: TextStyle(
+                color: Palettes.nyctophile,
+                fontWeight: FontWeight.w600,
+              ),
             ),
           ),
-      ),
-      const Divider(
-        height: 24,
-        thickness: 1,
-      ),
-    ],
-  );
+          const Divider(
+            height: 24,
+            thickness: 1,
+          ),
+        ],
+      );
 
   Padding _detailReview(Review review) {
     return Padding(
@@ -293,26 +293,26 @@ class _SectionMoviesState extends State<SectionMovies> {
             ),
           ),
           SingleChildScrollView(
-              scrollDirection: Axis.horizontal,
-              child: review.results!.isNotEmpty
-                  ? Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: List.generate(
-                        review.results!.length,
-                        (index) => Container(
-                          width: 300,
-                          height: 150,
-                          margin: EdgeInsets.only(
-                            right: index != review.results!.length - 1 ? 16 : 0
-                          ),
-                          child: _detailReviewCard(
-                            ReviewResults.fromJson(review.results![index]),
-                          ),
+            scrollDirection: Axis.horizontal,
+            child: review.results!.isNotEmpty
+                ? Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: List.generate(
+                      review.results!.length,
+                      (index) => Container(
+                        width: 300,
+                        height: 150,
+                        margin: EdgeInsets.only(
+                            right:
+                                index != review.results!.length - 1 ? 16 : 0),
+                        child: _detailReviewCard(
+                          ReviewResults.fromJson(review.results![index]),
                         ),
                       ),
-                    )
-                  : const EmptyComponent(),
-                ),
+                    ),
+                  )
+                : const EmptyComponent(),
+          ),
         ],
       ),
     );
@@ -328,7 +328,7 @@ class _SectionMoviesState extends State<SectionMovies> {
         border: Border.all(
           color: Palettes.black.withOpacity(0.1),
         ),
-        borderRadius: BorderRadius.circular(8), 
+        borderRadius: BorderRadius.circular(8),
         color: Colors.white,
       ),
       child: Column(
